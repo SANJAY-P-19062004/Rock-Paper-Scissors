@@ -1,0 +1,146 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url(./images/background_img2.tiff); /* Adjust this based on your project structure */
+  background-size: cover; /* Ensure the background covers the entire page */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the background from repeating */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ensure it takes up the full viewport height */
+  width: 100vw;  /* Ensure it takes up the full viewport width */
+}
+
+
+/* Style the container */
+.game-container {
+  height: 70vh;
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;   
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;       
+  transition: background-color 0.3s ease;     /* Optional: Background color */
+}
+
+/* Style for the side images */
+.side-image {
+  width: 200px;                 /* Set the width of the images */
+  height: auto;                 /* Automatically adjust the height */
+  object-fit: contain;          /* Ensure the image fits nicely within the box */
+}
+
+/* Style the button group in the middle */
+.button-group {
+  display: flex;                /* Arrange the buttons horizontally */
+  flex-direction: column;       /* Stack buttons vertically */
+  align-items: center;          /* Center the buttons */
+}
+
+/* Style for the buttons */
+.play-btn {
+  padding: 10px 20px;
+  margin: 10px;                 /* Add margin between the buttons */
+  font-size: 18px;
+  background-color: #007bff;    /* Button background color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for buttons */
+.play-btn:hover {
+  background-color: #0056b3;    /* Darker shade on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .game-container {
+    flex-direction: column;     /* Stack everything vertically on smaller screens */
+  }
+
+  .side-image {
+    width: 100px;               /* Smaller image size on mobile */
+  }
+
+  .button-group {
+    flex-direction: row;        /* Arrange buttons horizontally on smaller screens */
+  }
+}
+
+
+.title {
+  font-size: 2.5rem;
+  color: #61dafb;
+  margin-bottom: 30px;
+}
+
+.start-button, .submit-button {
+  position: absolute; /* or fixed if you want it fixed even when the user scrolls */
+  right: 200px; /* 20px from the right */
+  bottom: 200px; /* 20px from the bottom */
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.start-button:hover, .submit-button:hover {
+  background-color: #21a1f1;
+  transform: scale(1.1);
+}
+
+.input-section {
+  margin: 20px 0;
+  color: RED;
+}
+
+input {
+  padding: 10px;
+  color:red;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  
+}
+
+.score-board {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+h2 {
+  margin: 10px 0;
+}
+
+.result-container {
+  margin-top: 20px;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.result-container.animate-choice {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+

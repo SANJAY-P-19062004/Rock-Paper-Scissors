@@ -7,7 +7,7 @@ import paperImg from '../images/paper.jpg';
 import scissorsImg from '../images/scissors.jpg';
 import './animation.css';
 
-const socket = io('https://rock-paper-scissors-10.onrender.com'); // Adjust the URL as needed
+const socket = io('https://rock-paper-scissors-12.onrender.com'); // Adjust the URL as needed
 
 const Game = () => {
     const navigate = useNavigate();

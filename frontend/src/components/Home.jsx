@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import io from 'socket.io-client';
 import backgroundImg from '../images/background_img.jpg'; // Background image
 
-const socket = io('https://rock-paper-scissors-10.onrender.com'); // Adjust the URL as needed
+const socket = io('https://rock-paper-scissors-12.onrender.com'); // Adjust the URL as needed
 
 const Home = () => {
     const navigate = useNavigate();
